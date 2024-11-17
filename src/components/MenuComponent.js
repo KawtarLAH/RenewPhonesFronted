@@ -22,7 +22,6 @@ const MenuComponent = () => {
     if (external) {
       window.location.href = link;
     } else {
-      // Utilisez React Router si vous avez une navigation interne
       window.location.pathname = link;
     }
     handleMenuClose();

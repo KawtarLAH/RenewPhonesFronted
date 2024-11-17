@@ -1,10 +1,6 @@
-/* Styles pour le header et le menu desktop */
+/* Par défaut, masquer le menu desktop sur mobile */
 .menu-container-desktop {
-  display: flex;
-  justify-content: space-between; /* espace entre le menu et le bouton */
-  align-items: center; /* centrer verticalement */
-  width: 100%;
-  padding: 0 20px; /* Ajouter un peu de padding pour la marge */
+  display: none; /* Masquer par défaut */
 }
 
 .menu-desktop {
@@ -35,4 +31,23 @@
 
 .access-seller-btn:hover {
   background-color: #45a049; /* Couleur au survol */
+}
+
+/* Afficher le menu desktop seulement sur les grands écrans */
+@media (min-width: 768px) {
+  .menu-container-desktop {
+    display: flex; /* Afficher le menu desktop sur les écrans plus grands */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
