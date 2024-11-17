@@ -4,7 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import MenuComponent from './MenuComponent'; // Importer le composant Menu
-import './header.css'; // Importer le fichier CSS
+import './Header.css'; // Importer le fichier CSS
 
 const Header = () => {
   return (

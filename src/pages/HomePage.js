@@ -1,8 +1,8 @@
 import React from 'react';
-import { Container, Typography, Box } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Fade, Slide } from 'react-awesome-reveal';
-import './Home.css'; // Importer les styles CSS spécifiques
+import './HomePages.css'; // Importer les styles CSS spécifiques
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {

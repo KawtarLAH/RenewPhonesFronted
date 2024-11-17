@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import './footer.css'; // Importer les styles CSS du footer
+import './Footer.css'; // Importer les styles CSS du footer
 
 const Footer = () => {
   return (
