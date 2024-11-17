@@ -1,0 +1,12 @@
+{
+  "menuItems": [
+    { "label": "Accueil", "link": "/" },
+    { "label": "Acheter", "link": "/PhonesList" },
+    { "label": "Réparer", "link": "https://irepairit.netlify.app/", "external": true },
+    { "label": "Compte", "link": "/compte" },
+    { "label": "Panier", "link": "/panier" },
+   
+    { "label": "Contact", "link": "/contact" }
+  ],
+  "sellerAccess": { "label": "Accès Vendeur", "link": "/seller" }
+}

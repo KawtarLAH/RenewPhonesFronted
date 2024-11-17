@@ -3,8 +3,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import './menu-mobile.css'; // Styles pour mobile
-import './menu-desktop.css'; // Styles pour desktop
+import menuData from './menu.json'; // Importer les données du menu
+import './menu-mobile.css'; // Import des styles mobile
+import './menu-desktop.css'; // Import des styles desktop
 
 const MenuComponent = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -17,9 +18,14 @@ const MenuComponent = () => {
     setAnchorEl(null);
   };
 
-  const handleRepairClick = () => {
-    // Redirige vers le site de réparation dans le même onglet
-    window.location.href = 'https://irepairit.netlify.app/';
+  const handleMenuItemClick = (link, external) => {
+    if (external) {
+      window.location.href = link;
+    } else {
+      // Utilisez React Router si vous avez une navigation interne
+      window.location.pathname = link;
+    }
+    handleMenuClose();
   };
 
   return (
@@ -40,25 +46,38 @@ const MenuComponent = () => {
           open={Boolean(anchorEl)}
           onClose={handleMenuClose}
         >
-          <MenuItem onClick={handleMenuClose} className="menu-item">Accueil</MenuItem>
-          <MenuItem onClick={handleMenuClose} className="menu-item">Acheter</MenuItem>
-          {/* Lien vers le site de réparation */}
-          <MenuItem onClick={() => { handleRepairClick(); handleMenuClose(); }} className="menu-item">Réparer</MenuItem>
-          <MenuItem onClick={handleMenuClose} className="menu-item">Echanger</MenuItem>
-          <MenuItem onClick={handleMenuClose} className="menu-item">Contact</MenuItem>
+          {menuData.menuItems.map((item, index) => (
+            <MenuItem
+              key={index}
+              onClick={() => handleMenuItemClick(item.link, item.external || false)}
+              className="menu-item"
+            >
+              {item.label}
+            </MenuItem>
+          ))}
         </Menu>
       </div>
 
-      {/* Menu pour ordinateur */}
+      {/* Menu pour desktop */}
       <div className="menu-container-desktop">
         <ul className="menu-desktop">
-          <li className="menu-item">Accueil</li>
-          <li className="menu-item">Acheter</li>
-          {/* Lien vers le site de réparation */}
-          <li className="menu-item" onClick={handleRepairClick}>Réparer</li>
-          <li className="menu-item">Echanger</li>
-          <li className="menu-item">Contact</li>
+          {menuData.menuItems.map((item, index) => (
+            <li
+              key={index}
+              className="menu-item"
+              onClick={() => handleMenuItemClick(item.link, item.external || false)}
+            >
+              {item.label}
+            </li>
+          ))}
         </ul>
+
+        {/* Bouton d'accès Vendeur */}
+        <div className="seller-access-container">
+          <button className="access-seller-btn" onClick={() => handleMenuItemClick(menuData.sellerAccess.link)}>
+            {menuData.sellerAccess.label}
+          </button>
+        </div>
       </div>
     </div>
   );

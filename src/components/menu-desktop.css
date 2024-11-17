@@ -1,38 +1,38 @@
+/* Styles pour le header et le menu desktop */
 .menu-container-desktop {
-    display: none; /* Caché par défaut */
-    background-color: #e0e0e0; /* Gris clair */
-    justify-content: center; /* Centrer les éléments horizontalement */
-    align-items: center; /* Centrer verticalement */
-    padding: 10px 20px; /* Espacement interne */
-    border-radius: 8px; /* Coins arrondis pour un look moderne */
-    position: fixed; /* Rendre le menu fixe en haut de l'écran */
-    top: 10px; /* Décaler légèrement du haut */
-    left: 50%; /* Positionnement horizontal centré */
-    transform: translateX(-50%); /* Centrer réellement l'élément */
-    z-index: 10; /* Garder au-dessus des autres éléments */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet subtil */
-  }
-  
-  /* Afficher le menu desktop sur les écrans larges */
-  @media (min-width: 768px) {
-    .menu-container-desktop {
-      display: flex;
-    }
-  }
-  
-  .menu-desktop {
-    list-style: none;
-    display: flex;
-    gap: 20px; /* Espacement entre les éléments */
-  }
-  
-  .menu-item {
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-  }
-  
-  .menu-item:hover {
-    color: #007a6b; /* Vert sarcelle pour le hover */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* espace entre le menu et le bouton */
+  align-items: center; /* centrer verticalement */
+  width: 100%;
+  padding: 0 20px; /* Ajouter un peu de padding pour la marge */
+}
+
+.menu-desktop {
+  display: flex;
+  justify-content: center; /* Centrer les éléments du menu */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 0 15px; /* Espacement entre les éléments du menu */
+  cursor: pointer;
+}
+
+.seller-access-container {
+  margin-left: auto; /* Pousse le bouton à droite */
+}
+
+.access-seller-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Couleur de fond du bouton */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.access-seller-btn:hover {
+  background-color: #45a049; /* Couleur au survol */
+}
