@@ -1,0 +1,87 @@
+/* PhonesList.css */
+
+/* Conteneur principal - centré */
+.phones-list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    padding: 20px;
+    flex-direction: column;
+  }
+  
+  /* Conteneur du header */
+  .phones-header {
+    margin-bottom: 40px;  /* Espacement entre le header et la liste */
+    text-align: center;
+  }
+  
+  .main-title {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Conteneur de la liste des téléphones et de la recherche */
+  .phones-list-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;  /* Espacement entre la recherche et la liste */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grille des cartes de téléphones */
+  .phones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 75%;
+  }
+  
+  /* Carte de téléphone */
+  /* src/pages/Phones/PhonesList.css */
+
+.phone-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .phone-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .phone-image {
+    width: 100%;
+    max-width: 200px; /* Limiter la taille de l'image */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .phone-info {
+    text-align: center;
+  }
+  
+  .phone-info h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .phone-info p {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  

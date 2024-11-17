@@ -1,21 +1,26 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Assurez-vous d'utiliser Router
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css'; // Ton fichier global de styles
 import Home from './pages/HomePage';
+import PhonesList from './pages/Phones/PhonesList'; // Importez la page PhonesList
+import './App.css'; // Styles globaux
 import './index.css';
-
 
 const App = () => {
   return (
-    <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
-      <main style={{ flex: '1' }}>
-        {/* Contenu principal ici */}
-        <Home/>
-      </main>
-      <Footer />
-    </div>
+    <Router> {/* Le Router enveloppe toute l'application */}
+      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Header />
+        <main style={{ flex: '1' }}>
+          <Routes> {/* Définir les Routes ici */}
+            <Route path="/" element={<Home />} />
+            <Route path="/phoneslist" element={<PhonesList />} /> {/* Route pour PhonesList */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 

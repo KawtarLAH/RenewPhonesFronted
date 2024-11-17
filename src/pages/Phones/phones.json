@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "iPhone 13",
+    "color": "Noir",
+    "condition": "Neuf",
+    "price": 799,
+    "image": "/images/iphone13.jpg"  
+  },
+  {
+    "id": 2,
+    "brand": "Samsung",
+    "model": "Galaxy S21",
+    "color": "Blanc",
+    "condition": "Occasion",
+    "price": 599,
+    "image": "/images/galaxys21.jpg"
+  }
+]

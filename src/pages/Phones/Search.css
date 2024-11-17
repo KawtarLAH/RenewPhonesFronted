@@ -1,0 +1,58 @@
+/* src/components/Search.css */
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .search-item {
+    margin-bottom: 15px;
+  }
+  
+  .search-input {
+    width: 250px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input:focus {
+    border-color: #a3c5c4; /* Couleur de focus attractive */
+    box-shadow: 0 0 10px rgba(163, 197, 196, 0.8);
+    animation: waw 0.5s ease-out forwards;
+  }
+  
+  .search-input::placeholder {
+    color: #aaa;
+    transition: color 0.3s ease;
+  }
+  
+  .search-input:focus::placeholder {
+    color: #a3c5c4; /* Placeholder qui change de couleur quand l'input est focus */
+  }
+  
+  /* Animation Waw */
+  @keyframes waw {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
+  

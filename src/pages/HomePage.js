@@ -1,10 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Typography, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { Fade, Slide } from 'react-awesome-reveal';
 import './HomePages.css'; // Importer les styles CSS spécifiques
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   mainContainer: {
     backgroundColor: '#f4f7f6',
     minHeight: '100vh',
@@ -50,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '20px',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
     cursor: 'pointer', // Indiquer que la section est cliquable
+    '&:hover': {
+      backgroundColor: '#e0e0e0',
+    },
   },
   sectionTitle: {
     fontWeight: 600,
@@ -65,10 +69,15 @@ const useStyles = makeStyles((theme) => ({
 
 const Home = () => {
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path);
+  };
 
   return (
     <div className={classes.mainContainer}>
-      {/* Section Header avec texte mis en valeur */}
+      {/* Section Header */}
       <div className={classes.headerSection}>
         <Fade triggerOnce duration={1000}>
           <Typography variant="h2" className={classes.title}>
@@ -77,15 +86,18 @@ const Home = () => {
         </Fade>
         <Fade triggerOnce duration={1500}>
           <Typography variant="h5" className={classes.subtitle}>
-            Achetez, échangez et réparez vos smartphones en toute simplicité.
+            Achetez, réparez vos smartphones en toute simplicité.
           </Typography>
         </Fade>
       </div>
 
-      {/* Sections Acheter, Échanger, Réparer */}
+      {/* Section Acheter */}
       <div className={classes.sectionContainer}>
         <Slide triggerOnce duration={2500} direction="up">
-          <Box className={classes.sectionCard}>
+          <Box
+            className={classes.sectionCard}
+            onClick={() => handleNavigate('/phoneslist')} // Redirection vers la page phoneslist
+          >
             <Typography variant="h6" className={classes.sectionTitle}>Acheter</Typography>
             <Typography variant="body1" className={classes.sectionDescription}>
               Découvrez nos smartphones neufs et d'occasion à des prix compétitifs.
@@ -94,17 +106,7 @@ const Home = () => {
         </Slide>
       </div>
 
-      <div className={classes.sectionContainer}>
-        <Slide triggerOnce duration={3000} direction="up">
-          <Box className={classes.sectionCard}>
-            <Typography variant="h6" className={classes.sectionTitle}>Échanger</Typography>
-            <Typography variant="body1" className={classes.sectionDescription}>
-              Reprenez vos anciens téléphones et bénéficiez d'une offre avantageuse.
-            </Typography>
-          </Box>
-        </Slide>
-      </div>
-
+      {/* Section Réparer */}
       <div className={classes.sectionContainer}>
         <Slide triggerOnce duration={3500} direction="up">
           <a href="https://irepairit.netlify.app/" target="_blank" rel="noopener noreferrer">
