@@ -1,0 +1,10 @@
+.footer-link {
+    color: #ffffff; /* Texte blanc */
+    text-decoration: none;
+    margin: 0 5px;
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  

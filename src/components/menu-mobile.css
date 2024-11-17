@@ -1,0 +1,15 @@
+.menu-container-mobile {
+    display: flex;
+    background-color: #f0f0f0;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+  }
+  
+  /* Cacher le menu mobile sur les écrans plus larges */
+  @media (min-width: 768px) {
+    .menu-container-mobile {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,22 @@
+/* menu.css */
+.menu-container {
+    display: flex;
+    justify-content: flex-start; /* Aligne le menu à gauche */
+    align-items: center;
+    height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+    background-color: #f0f0f0; /* Fond gris */
+    padding-left: 20px; /* Ajoute un espace sur la gauche */
+  }
+  
+  .menu-item {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #333;
+  }
+  
+  .menu-item:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  

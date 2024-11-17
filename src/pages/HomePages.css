@@ -1,0 +1,47 @@
+/* home.css */
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Style des composants */
+  .main-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f7f6;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: #007a6b;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    background-color: #007a6b;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+  
+  .grid-container {
+    margin-top: 40px;
+  }
+  
+  .grid-item {
+    text-align: center;
+  }
+  
